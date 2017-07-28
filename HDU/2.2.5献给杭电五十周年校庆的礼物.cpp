@@ -2,10 +2,8 @@
 #include<iostream>
 using namespace std;
 int main(){
-	int range[1002];
-	
-	int input;
-	while(cin >> input)cout << range[input] << endl;
+	int n;
+	while(cin >> n)cout << (n*n*n+5*n)/6+1 << endl;
 	return 0;
 }
 /*
