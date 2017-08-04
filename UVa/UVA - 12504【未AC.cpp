@@ -5,7 +5,7 @@
 #include<map>
 #include<sstream>
 #include<vector>
-const int maxn = 1000+3;
+const int maxn = 10000+3;
 using namespace std;
 int main(){
 	int cases;
