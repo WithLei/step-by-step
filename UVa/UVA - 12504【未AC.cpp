@@ -7,6 +7,7 @@
 #include<vector>
 const int maxn = 10000+3;
 using namespace std;
+
 int main(){
 	int cases;
 	cin >> cases;
