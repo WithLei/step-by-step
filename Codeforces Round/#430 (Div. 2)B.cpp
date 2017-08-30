@@ -13,12 +13,12 @@ using namespace std;
 int main(){
 	int r ,d;
 	while(cin >> r >> d){
-		int n,x,y,rr,range=0;
+		LL n,x,y,rr,range=0;
 		cin >> n;
 		for(int i=0;i<n;i++){
 			cin >> x >> y >> rr;
-			cout << x*x+y*y << " " << (d+rr)*(d+rr) <<  " " << x*x+y*y << " " << (r-rr)*(r-rr) << endl;
-			if(x*x+y*y >= (d+rr)*(d+rr) && x*x+y*y <= (r-rr)*(r-rr))range++;
+//			cout << x*x+y*y << " " << (d+rr)*(d+rr) <<  " " << x*x+y*y << " " << (r-rr)*(r-rr) << endl;
+			if(x*x+y*y >= (r-d+rr)*(r-d+rr) && x*x+y*y <= (r-rr)*(r-rr))range++;
 		}
 		cout << range << endl;
 	}

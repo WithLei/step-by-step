@@ -13,8 +13,11 @@ using namespace std;
 int main(){
 	double l,r,x,y,k;
 	while(cin >> l >> r >> x >> y >> k){
-		if((r/x) >= k && (l/y) <= k)cout << "YES" << endl;
-		else cout << "NO" << endl;
+		bool flag = true;
+		for(int i=x;i<=y;i++)
+			if(r >= k*i && l <= k*i){
+			cout << "YES" << endl;flag=false;break;}
+		if(flag)cout << "NO" << endl;
 	}
 	
 }
