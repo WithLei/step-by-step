@@ -32,15 +32,15 @@ inline void calc(int *a, int *b) {
 
 	
 int main() {
-	freopen("contest.in", "r", stdin);
-	freopen("contest.out", "w", stdout);
+//	freopen("contest.in", "r", stdin);
+//	freopen("contest.out", "w", stdout);
 	scanf("%d", &n);
 	for (int i = 1; i <= n; i++) scanf("%d%d%d", &a[i], &b[i], &c[i]);
 	ans = 0;
 	calc(a, b); calc(a, c);
 	calc(b, a); calc(b, c);
 	calc(c, a); calc(c, b);
-	printf("%I64d\n", ans >> 2);
+	printf("%lld\n", ans >> 2);
 }
 
 	
