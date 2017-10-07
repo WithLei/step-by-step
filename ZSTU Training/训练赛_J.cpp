@@ -36,6 +36,7 @@ void work(int step,int len,int x,int y,char now){
 int main(){
 	int cases;
 	cin >> cases;
+	cout << cases << endl;
 	for(int i=1;i<=cases;i++){
 		maxx=minx=0;
 		miny=maxy=102;
@@ -43,6 +44,7 @@ int main(){
 		memset(m,0,sizeof(m));
 		int step = 0;
 		work(step,s.length(),0,102,'R');
+		cout << maxy-miny+3 << " " << maxx-minx+2 << endl;
 		//top
 		for(int x=minx;x<=maxx+1;x++)
 			cout << "#";

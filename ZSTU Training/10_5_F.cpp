@@ -9,7 +9,7 @@ int main(){
 	int temp;	
 	if(r1>10*r)temp=0;
 	else
-		for(int i=0;i<r;i++){
+		for(int i=0;i<10;i++){
 			if(r1>=i*r&&r1<=(i+1)*r){
 				temp=10-i;
 				break;
@@ -20,7 +20,7 @@ int main(){
 
 	if(r2>10*r)temp=0;
 	else
-		for(int i=0;i<r;i++){
+		for(int i=0;i<10;i++){
 			if(r2>=i*r&&r2<=(i+1)*r){
 				temp=10-i;
 				break;
@@ -30,7 +30,7 @@ int main(){
 //	cout << result << endl;
 	if(r3>10*r)temp=0;
 	else
-		for(int i=0;i<r;i++){
+		for(int i=0;i<10;i++){
 			if(r3>=i*r&&r3<=(i+1)*r){
 				temp=10-i;
 				break;
