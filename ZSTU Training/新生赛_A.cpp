@@ -1,34 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
-#define PI acos(-1.0)
-typedef pair<int,int>point;
-map<int,point>r;
- 
- 
-LL result[19000]={0};
+const int maxn = 1e4+7;
+const LL maxnum = 1e9;
+const int x = 18258;
+typedef pair<LL,LL>ab;
+LL num[2*maxn]={0};
+
 int main(){
-    int c;
-    for(int i=1;i<=18258;i++){
-        result[i]=pow(i,3)-pow(i-1,3);
-    }
-    for(int i=18258;i>0;i--){
-        LL sum=0;
-        for(int j=i;j>0;j--){
-            sum += result[j];
-            if(sum>=1e9)break;
-            if(r[sum].first==0||r[sum].first>j){
-	            point temp(j-1,i);
-	            r[sum]=temp;
-            }
-        }
-    }
-//  cout << "here" << endl;
-    while(cin >> c){
-        if(r[c].first&&r[c].second)
-            cout << r[c].first << " " << r[c].second << endl;
-        else
-            cout << "-1" << endl;
-    }
-    return 0;
-}
+	for(int i=2;i<=x;i++)
+		num[i-1]=pow(i,3)-pow(i-1,3);
+	int c;
+	while(cin >> c){
+		deque<LL>q;
+		bool flag = false;
+		LL sum = 0;
+		for(int i=1;i<=x;i++){
+			q.push_back(i);
+			sum+=num[i];
+			while(!q.empty()&&sum>c){
+				sum-=num[q.front()];
+				q.pop_front();
+			}
+			if(sum==c){
+				cout << q.front() << " " << q.back()+1 << endl;
+				flag = true;
+				break;
+			}
+		}
+		if(!flag)
+			cout << "-1" << endl;
+	}
+	
+} 
