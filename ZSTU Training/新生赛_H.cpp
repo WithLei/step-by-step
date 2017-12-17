@@ -27,7 +27,7 @@ int main(){
 		else{
 			int result = 0;
 //			int result = l<=s?s-l+1:0;
-			for(int i=s>l?l:s;i<=r;i++){
+			for(int i=l;i<=r;i++){
 				if(judge(i,s))
 					result++;
 			}
